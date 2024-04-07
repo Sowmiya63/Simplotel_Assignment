@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+nav {
+    background-color:#ffffff;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+  
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    
+    
+    display: flex;
+    justify-content: center; 
+}
+
+#logo{
+    margin-left: 20px;
+}
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0; 
+}
+nav ul li a {
+    display: block;
+    color: #000000;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+.whatsapp-icon {
+    border-radius: 50px;
+    margin-bottom: 9px;
+}
+
+.icons img {
+    margin-left: 20px;
+}
+#toggle-menu,
+.toggle-icon {
+    display: none; 
+    width: 50px;
+    height: 50px; 
+}
+
+.toggle-menu {
+    display: none;
+}
+
+#toggle-menu:checked + .toggle-icon + .menu-container {
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    
+    .logo {
+        margin-left: 10px; 
+    }
+
+    .toggle-icon {
+        display:none; 
+    }
+
+    .toggle-menu {
+        display: none;
+    }
+ 
+    #toggle-menu:checked + .toggle-icon + .menu-container {
+        display: block;
+    }
+
+    .icons {
+        display: block; 
+    }
+
+   
+}
+@media (max-width: 627px){ /* Show navigation links when toggle icon is checked */
+    .logo {
+        margin-left: 10px; 
+    }
+
+    .toggle-icon {
+        display:block; 
+    }
+
+    .toggle-menu {
+        display: block;
+    
+    }
+ 
+    #toggle-menu:checked + .toggle-icon + .menu-container nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0; 
+    }
+}
+
+/* Content section */
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 250px; 
+    left: 20px; 
+    width: 300px;
+    height: 40px;
+    padding: 10px 10px;
+    margin-left: 20px;
+    text-align: center;
+    background: linear-gradient(to right,#131313, #2d2d2d, #4d4d4d, #707070);
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+}
+
+.text-overlay h2 {
+    margin: 0; 
+}
+
+.container-dummy {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    margin-top: 20px;
+}
+
+.container {
+    background-color: rgba(178,178,178,255); 
+    padding: 6px; 
+    width: 100%; /* Set width to 100% */
+}
+
+.container-dummy p {
+    margin-bottom: 10px;
+    word-break: normal;
+    width: calc(33.33% - 10px); 
+    padding: 15px; 
+    background-color: rgba(178,178,178,255);
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .container-dummy p {
+        width: 100%; 
+    }
+
+    #heroimg {
+        width: 100%; 
+    }
+
+    .text-overlay {
+        bottom: 0; 
+        left: 0; 
+        width: auto; 
+        padding: 10px;
+        text-align: center; 
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .container {
+        width: 100%; 
+        
+    }
+
+    .content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .container-dummy p {
+        width: calc(33.33% - 20px);
+        height: max-content;
+        flex-direction: row;
+    }
+
+    .text-overlay {
+        position: absolute;
+        top: 250px; 
+        left: 20px; 
+        width: 300px;
+        height: 40px;
+        padding: 10px 10px;
+        margin-left: 20px;
+        text-align: center;
+        background: linear-gradient(to right,#131313, #2d2d2d, #4d4d4d, #707070);
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        border: 1px solid #ccc; 
+        border-radius: 5px;
+    }
+}
+
+
+/* Second section */
+.second-section {
+    background-color: #dad6df;
+    padding: 10px;
+}
+
+.title {
+    color: #000000;
+}
+
+.services {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.services-1,
+.services-2,
+.services-3 {
+    flex: 1;
+    padding: 20px;
+    background-color: #dad6df;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.services-heading {
+    font-size: 24px;
+    color: #010101;
+    margin-top: 15px;
+}
+
+#rooms-heading{
+    text-align: left;
+}
+
+#pool-heading{
+    text-align: right;
+}
+
+.services-1 p,
+.services-2 p,
+.services-3 p {
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.services-imgs {
+    width: 100%;
+}
+
+.learn-more-btn {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    align-items: flex-start;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .services-1,
+    .services-2,
+    .services-3 {
+        flex-basis: 100%; 
+    }
+}
+
+@media (max-width: 402px) {
+    .services {
+        flex-direction: column; 
+    }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 468px) and (max-height: 464px) {
+    .menu-container {
+        display: none;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-bar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-bar ul li {
+        margin: 10px 0;
+    }
+
+    .toggle-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    #toggle-menu:checked + .menu-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        padding: 0 20px;
+    }
+
+    #heroimg {
+        width: 100%;
+        height: auto;
+    }
+
+    .text-overlay {
+        top: 15px;
+        margin-left: 0%;
+        width: 70px;
+        height: 70px;
+        text-wrap: wrap;
+        left: 20px;
+    }
+
+    .container-dummy p {
+        width: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .second-section {
+        width: 100%;
+        max-width: 100%;
+    }
+}
